@@ -19,7 +19,7 @@ int main(void)
 	signal(SIGSEGV, sigsegv);
 	title("ft_putchar_fd\t: ")
 
-	int fd = open("tripouille", O_RDWR | O_CREAT);
+	int fd = open("tripouille", O_RDWR | O_CREAT, 0600);
 	ft_putchar_fd('a', fd);
 	lseek(fd, SEEK_SET, 0);
 	char s[10] = {0}; read(fd, s, 2);
